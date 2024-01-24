@@ -11,5 +11,8 @@ def update_topics(mongo_collection, name, topics):
         mongo_collection.update_many(
                                      filter_criteria,
                                      unset_old_attri,
+                                    )
+        mongo_collection.update_many(
+                                     filter_criteria,
                                      set_attri
                                     )
