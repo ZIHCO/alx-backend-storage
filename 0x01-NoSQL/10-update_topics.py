@@ -5,8 +5,11 @@
 def update_topics(mongo_collection, name, topics):
     """changes a doc attr"""
     if mongo_collection is not None:
+        filter_criteria = {'name': name}
+        unset_old_attri = {$unset: 'topics'}
+        set_attri = {$set: {"topics": topics}}
         list_named_topic = mongo_collection.update_many(
-                                                   {'name': name},
-                                                   {$unset: "topics"},
-                                                   {$set:  {"topics": topics}}
+                                                   filter_criteria,
+                                                   unset_old_attri,
+                                                   set_attri
                                                    )
