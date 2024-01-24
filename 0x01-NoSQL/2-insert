@@ -1,5 +1,7 @@
 // insert document
 
+use
+
 db.school.insertOne({
 	"name": "Holberton school"
 });
