@@ -1,0 +1,4 @@
+// count collection docs
+
+db.school.count();
+exit
