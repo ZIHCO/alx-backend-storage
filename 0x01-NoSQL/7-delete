@@ -1,0 +1,6 @@
+// delete all match
+
+db.school.delete({
+	name: 'Holberton school'
+});
+exit
