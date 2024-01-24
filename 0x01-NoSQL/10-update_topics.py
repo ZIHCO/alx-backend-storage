@@ -12,4 +12,5 @@ def update_topics(mongo_collection, name, topics):
         for doc in lists:
             doc["topics"] = topics
 
-
+    else:
+        mongo_collection.update(filter_criteria, set_attri)
