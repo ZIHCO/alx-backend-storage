@@ -8,7 +8,8 @@ def update_topics(mongo_collection, name, topics):
         filter_criteria = {'name': name}
         unset_old_attri = {"$unset": 'topics'}
         set_attri = {"$set": {"topics": topics}}
-        list_named_topic = mongo_collection.update_many(
-                                                        filter_criteria,
-                                                        unset_old_attri,
-                                                        set_attri)
+        mongo_collection.update_many(
+                                     filter_criteria,
+                                     unset_old_attri,
+                                     set_attri
+                                    )
