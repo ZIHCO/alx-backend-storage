@@ -1,6 +1,6 @@
 // insert document
 
-db.school.insertOne({
+db.school.insert({
 	name: "Holberton school"
 });
 exit
