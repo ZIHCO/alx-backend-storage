@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """writing strings to Redis"""
 from redis import Redis
+from typing import Union
 import uuid
 
 
@@ -12,7 +13,7 @@ class Cache:
         self._redis = Redis()
         self._redis.flushdb
 
-    def store(self, data: any) -> str:
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         """returns the key"""
         key = uuid.uuid4().hex
         self._redis.set(key, data)
