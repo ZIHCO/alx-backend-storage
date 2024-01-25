@@ -8,7 +8,7 @@ import uuid
 class Cache:
     """defines a redis object"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """instantiate a Redis client object"""
         self._redis = Redis()
         self._redis.flushdb
