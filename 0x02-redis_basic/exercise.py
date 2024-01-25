@@ -12,7 +12,7 @@ class Cache:
         self._redis = Redis()
         self._redis.flushdb
 
-    def store(self, data: [str | bytes | int | float]) -> str:
+    def store(self, data: str | bytes | int | float) -> str:
         """returns the key"""
         key = str(uuid.uuid4())
         self._redis.set(key, data)
