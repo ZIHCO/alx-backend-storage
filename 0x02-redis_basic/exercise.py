@@ -14,6 +14,6 @@ class Cache:
 
     def store(self, data: any) -> str:
         """returns the key"""
-        key = str(uuid.uuid4())
+        key = uuid.uuid4().hex
         self._redis.set(key, data)
         return key
