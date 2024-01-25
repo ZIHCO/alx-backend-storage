@@ -11,7 +11,7 @@ class Cache:
     def __init__(self):
         """instantiate a Redis client object"""
         self._redis = Redis()
-        self._redis.flushdb
+        self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """returns the key"""
