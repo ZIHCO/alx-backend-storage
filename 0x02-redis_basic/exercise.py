@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """writing strings to Redis"""
 import redis
-from typing import Unioni, Any, Callable
+from typing import Union, Any, Callable
 import uuid
 from functools import wraps
 
